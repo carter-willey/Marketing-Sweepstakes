@@ -1,7 +1,7 @@
 class UserInterface:
     @staticmethod
     def display_message(message):
-        pass
+        print(message)
 
     @staticmethod
     def get_user_input_string(prompt):
@@ -15,7 +15,7 @@ class UserInterface:
 
     @staticmethod
     def display_contestant_info(contestant):
-        pass
+        print(f"#{contestant.registration_number} {contestant.first_name} {contestant.last_name} and their email is {contestant.email}")
 
     @staticmethod
     def display_sweepstakes_info(sweepstakes):

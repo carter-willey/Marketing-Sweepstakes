@@ -1,4 +1,14 @@
 from userinterface import UserInterface
 from contestant import Contestant
-contestant1 = Contestant()
-print(contestant1.first_name, contestant1.last_name, contestant1.email)
+from sweepstakes import Sweepstakes
+sweepstake = Sweepstakes()
+
+
+contestant1 = Contestant("carter", "willey", "cjwilley23")
+contestant2 = Contestant("john", "doe", "jd23")
+contestant3 = Contestant("jane", "doe", "janedoe23")
+sweepstake.register_contestant(contestant1)
+sweepstake.register_contestant(contestant2)
+sweepstake.register_contestant(contestant3)
+sweepstake.view_contestants()
+sweepstake.pick_winner()

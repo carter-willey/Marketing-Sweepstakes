@@ -1,13 +1,17 @@
 from userinterface import UserInterface
+import random
 class Sweepstakes:
     def __init__(self):
         self.name = UserInterface.get_user_input_string("What would you like to name this Sweepstakes?: ")
         self.contestants = []
     def register_contestant(self, contestant):
         self.contestants.append(contestant)
+        contestant.registration_number = len(self.contestants)
     def pick_winner(self):
-        pass
+        random_winner = self.contestants[random.randint(0, len(self.contestants)-1)]
+        UserInterface.display_message(f"{random_winner.first_name} {random_winner.last_name} is the winner!")
     def view_contestants(self):
-        pass
+        for contestant in self.contestants:
+            UserInterface.display_contestant_info(contestant)
     def menu(self):
         pass
