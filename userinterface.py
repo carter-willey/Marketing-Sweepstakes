@@ -5,11 +5,13 @@ class UserInterface:
 
     @staticmethod
     def get_user_input_string(prompt):
-        pass
+        user_input = input(prompt)
+        return user_input
 
     @staticmethod
     def get_user_input_int(prompt):
-        pass
+        user_input = int(input(prompt))
+        return user_input
 
     @staticmethod
     def display_contestant_info(contestant):
