@@ -15,7 +15,6 @@ class Sweepstakes:
         for contestant in self.contestants:
             UserInterface.display_contestant_info(contestant)
     def menu(self):
-
         will_continue = True
         while will_continue:
             UserInterface.display_sweepstakes_menu_options(self)
@@ -31,3 +30,5 @@ class Sweepstakes:
                 pass
             else:
                 UserInterface.display_message("Please enter a valid number.")
+
+    def

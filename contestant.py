@@ -5,5 +5,6 @@ class Contestant:
         self.last_name = UserInterface.get_user_input_string("What is your last name?: ")
         self.email = UserInterface.get_user_input_string("What is your first email address?: ")
         self.registration_number = 0
+
     def notify(self, is_winner):
         pass
