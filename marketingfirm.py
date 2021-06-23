@@ -16,8 +16,10 @@ class MarketingFirm:
         if len(self.sweepstakes_storage) > 0:
             UserInterface.display_sweepstakes_selection_menu(self.sweepstakes_storage)
             user_input = UserInterface.get_user_input_int("")
-            if 0 <= user_input < len(self.sweepstakes_storage):
-                self.sweepstakes_storage[user_input].menu
+            user_input -= 1
+            if 0 <= user_input <= len(self.sweepstakes_storage):
+                sweepstake_to_interact_with = self.sweepstakes_storage[user_input]
+                sweepstake_to_interact_with.menu()
         else:
             UserInterface.display_message("There are currently no sweepstakes created. Please create a sweepstakes to then select it!")
             UserInterface.display_marketing_firm_menu_options(self.name)
