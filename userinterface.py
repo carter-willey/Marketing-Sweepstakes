@@ -23,21 +23,23 @@ class UserInterface:
 
     @staticmethod
     def display_sweepstakes_info(sweepstakes):
-        #LIST NUMBER OF CONTESTANTS
-        #LIST WINNER
         pass
 
     @staticmethod
     def display_sweepstakes_selection_menu(all_sweepstakes):
         # LIST OUT ALL SWEEPSTAKES
-        pass
+        i = 1   #for displaying in terminal
+        print("Which sweepstake would you like to interact with?:")
+        for sweepstake in all_sweepstakes:
+            print(f"{i}: {sweepstake.name}")
 
     @staticmethod
     def display_marketing_firm_menu_options(marketing_firm_name):
-        ###
-        #
-        ###
-        pass
+        print(f"\t\t-Hello, {marketing_firm_name}.-")
+        print("\tPress -1- to create a sweepstakes")
+        print("\tPress -2- to select a sweepstakes")
+        print("\tPress -3- to change your marketing firm's name")
+        print("\tPress -4- to terminate the program")
 
     @staticmethod
     def display_sweepstakes_menu_options(sweepstakes):

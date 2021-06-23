@@ -31,4 +31,3 @@ class Sweepstakes:
             else:
                 UserInterface.display_message("Please enter a valid number.")
 
-    def
