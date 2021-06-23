@@ -6,6 +6,7 @@ class Sweepstakes:
     def __init__(self):
         self.name = UserInterface.get_user_input_string("What would you like to name this Sweepstakes?: ")
         self.contestants = {}
+        self.has_winner_been_picked = False
 
     def register_contestant(self, contestant):
         contestant.registration_number = len(self.contestants)
@@ -14,8 +15,10 @@ class Sweepstakes:
     def pick_winner(self):
         random_winner = self.contestants[random.randint(0, len(self.contestants)-1)]
         random_winner.is_winner = True
+        self.has_winner_been_picked = True
         for contestant in self.contestants.values():
             contestant.notify()
+        UserInterface.display_message("Since a winner has been selected, this sweepstake will no longer be active!")
 
     def view_contestants(self):
         for contestant in self.contestants.values():

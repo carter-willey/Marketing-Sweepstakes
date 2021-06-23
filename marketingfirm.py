@@ -4,7 +4,7 @@ class MarketingFirm:
     def __init__(self):
         self.name = UserInterface.get_user_input_string("Hello and Welcome. Please enter the name of your marketing firm: ")
         self.sweepstakes_storage = []
-        self.menu()
+
     def create_sweepstakes(self):
         self.sweepstakes_storage.append(Sweepstakes())
 
@@ -13,6 +13,9 @@ class MarketingFirm:
 
     def select_sweepstakes(self):
         # display sweepstakes and promt which one they would like, then open the menu for that sweepstake
+        for sweepstake in self.sweepstakes_storage:
+            if sweepstake.has_winner_been_picked:
+                self.sweepstakes_storage.remove(sweepstake)
         if len(self.sweepstakes_storage) > 0:
             UserInterface.display_sweepstakes_selection_menu(self.sweepstakes_storage)
             user_input = UserInterface.get_user_input_int("")
@@ -21,7 +24,7 @@ class MarketingFirm:
                 sweepstake_to_interact_with = self.sweepstakes_storage[user_input]
                 sweepstake_to_interact_with.menu()
         else:
-            UserInterface.display_message("There are currently no sweepstakes created. Please create a sweepstakes to then select it!")
+            UserInterface.display_message("There are currently no active sweepstakes. Please create a sweepstakes to then select it!")
             UserInterface.display_marketing_firm_menu_options(self.name)
 
     def menu(self):
