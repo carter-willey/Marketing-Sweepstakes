@@ -22,10 +22,6 @@ class UserInterface:
         print(f"Contestant #{contestant.registration_number} is {contestant.first_name} {contestant.last_name} and their email is {contestant.email}")
 
     @staticmethod
-    def display_sweepstakes_info(sweepstakes):
-        pass
-
-    @staticmethod
     def display_sweepstakes_selection_menu(all_sweepstakes):
         # LIST OUT ALL SWEEPSTAKES
         i = 1   #for displaying in terminal
