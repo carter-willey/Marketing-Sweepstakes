@@ -32,6 +32,7 @@ class UserInterface:
         print("Which sweepstake would you like to interact with?:")
         for sweepstake in all_sweepstakes:
             print(f"{i}: {sweepstake.name}")
+            i += 1
 
     @staticmethod
     def display_marketing_firm_menu_options(marketing_firm_name):
