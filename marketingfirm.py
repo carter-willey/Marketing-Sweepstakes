@@ -36,7 +36,6 @@ class MarketingFirm:
             elif user_option == 3:
                 self.change_marketing_firm_name()
             elif user_option == 4:
-                # step back one menu to all sweepstakes
-                pass
+                will_continue = False
             else:
                 UserInterface.display_message("Please enter a valid number.")

@@ -2,4 +2,4 @@ from userinterface import UserInterface
 from contestant import Contestant
 from sweepstakes import Sweepstakes
 from marketingfirm import MarketingFirm
-mfirm = MarketingFirm()
+marketing_firm = MarketingFirm()
